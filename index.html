@@ -454,33 +454,33 @@
     <p class="lead">Reach our team directly, or leave your details and we'll come to you.</p>
 
     <div class="md-card">
-      <div class="md-avatar">RK</div>
+      <div class="md-avatar">WY</div>
       <div class="md-info">
-        <h3>Rawan Kadoor</h3>
-        <div class="role">Business Development Associate, BUNA Al Khaleej</div>
+        <h3>Walied Yussuf</h3>
+        <div class="role">Commercial Director, BUNA Al Khaleej</div>
       </div>
     </div>
 
     <div class="contact-rows">
-      <a class="contact-row" href="tel:+966536509321">
+      <a class="contact-row" href="tel:+966564641583">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
         <div class="txt">
           <div class="k">Phone</div>
-          <div class="v">+966 53 650 9321</div>
+          <div class="v">+966 56 464 1583</div>
         </div>
       </a>
-      <a class="contact-row" href="mailto:rak@buna.sa">
+      <a class="contact-row" href="mailto:way@buna.sa">
         <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
         <div class="txt">
           <div class="k">Email</div>
-          <div class="v">rak@buna.sa</div>
+          <div class="v">way@buna.sa</div>
         </div>
       </a>
     </div>
 
     <button class="btn-save" onclick="saveContact()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
-      Save Rawan's contact
+      Save Walied's contact
     </button>
 
     <div class="divider-text">Or send me your details</div>
@@ -489,7 +489,7 @@
       <input type="text" id="lead-name" placeholder="Your name" required>
       <input type="tel" id="lead-phone" placeholder="Phone number" required>
       <input type="email" id="lead-email" placeholder="Email address" required>
-      <button type="submit" class="btn-send">Send my details to Rawan</button>
+      <button type="submit" class="btn-send">Send my details to Walied</button>
     </form>
     <div id="lead-status"></div>
   </section>
@@ -766,12 +766,12 @@ function saveContact(){
   const vcard = [
     'BEGIN:VCARD',
     'VERSION:3.0',
-    'N:Kadoor;Rawan;;;',
-    'FN:Rawan Kadoor',
-    'TITLE:Business Development Associate',
+    'N:Yussuf;Walied;;;',
+    'FN:Walied Yussuf',
+    'TITLE:Commercial Director',
     'ORG:BUNA Al Khaleej',
-    'TEL;TYPE=CELL:+966536509321',
-    'EMAIL:rak@buna.sa',
+    'TEL;TYPE=CELL:+966564641583',
+    'EMAIL:way@buna.sa',
     'URL:https://bunaholding.com/en/subsidiaries/buna-al-khaleej',
     'END:VCARD'
   ].join('\n');
@@ -779,7 +779,7 @@ function saveContact(){
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'Rawan_Kadoor_BUNA.vcf';
+  a.download = 'Walied_Yussuf_BUNA.vcf';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
@@ -795,16 +795,16 @@ document.getElementById('lead-form').addEventListener('submit', function(e){
 
   const subject = encodeURIComponent('New connection request via Buna Al Khaleej');
   const body = encodeURIComponent(
-    'Hi Rawan,\n\nSomeone would like to connect with you via the Buna Al Khaleej site.\n\n' +
+    'Hi Walied,\n\nSomeone would like to connect with you via the Buna Al Khaleej site.\n\n' +
     'Name: ' + name + '\n' +
     'Phone: ' + phone + '\n' +
     'Email: ' + email + '\n\n' +
     'Please reach out at your convenience.'
   );
-  const mailto = 'mailto:rak@buna.sa?subject=' + subject + '&body=' + body;
+  const mailto = 'mailto:way@buna.sa?subject=' + subject + '&body=' + body;
 
   const status = document.getElementById('lead-status');
-  status.textContent = 'Opening your email app to send these details to Rawan…';
+  status.textContent = 'Opening your email app to send these details to Walied…';
   status.classList.add('show');
 
   window.location.href = mailto;
